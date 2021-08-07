@@ -27,6 +27,9 @@ DB_PASSWORD=your_password
 ## Models
 php artisan make:model Article -m
 
+## Database Seeding
+php artisan make:seeder ArticlesTableSeeder
+
 ```
 composer install
 php artisan migrate
