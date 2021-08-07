@@ -56,6 +56,8 @@ php artisan serve
 500: Internal server error. Ideally you're not going to be explicitly returning this, but if something unexpected breaks, this is what your user is going to receive.
 503: Service unavailable. Pretty self explanatory, but also another code that is not going to be returned explicitly by the application.
 
+## Authentication
+php artisan make:migration --table=users adds_api_token_to_users_table
 # References
 https://www.toptal.com/laravel/restful-laravel-api-tutorial
 https://github.com/andrecastelo/example-api
