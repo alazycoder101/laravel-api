@@ -30,6 +30,11 @@ php artisan make:model Article -m
 ## Database Seeding
 php artisan make:seeder ArticlesTableSeeder
 
+## Routes
+
+## Controller
+php artisan make:controller ArticleController
+
 ```
 composer install
 php artisan migrate
