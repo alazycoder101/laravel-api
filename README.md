@@ -58,8 +58,15 @@ php artisan serve
 
 ## Authentication
 php artisan make:migration --table=users adds_api_token_to_users_table
+
+## Docker
+https://github.com/yemiwebby/laravel-docker
+
 # References
 https://www.toptal.com/laravel/restful-laravel-api-tutorial
 https://github.com/andrecastelo/example-api
 https://hub.docker.com/r/bitnami/laravel/
 https://www.toptal.com/api-developers/5-golden-rules-for-designing-a-great-web-api
+https://www.twilio.com/blog/get-started-docker-laravel
+https://github.com/yemiwebby/laravel-docker
+https://laravel.com/docs/8.x/sail
