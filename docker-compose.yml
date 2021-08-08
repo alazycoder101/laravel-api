@@ -10,7 +10,7 @@ services:
       - POSTGRES_HOST_AUTH_METHOD=trust
   web:
     tty: true
-    image: docker.io/bitnami/laravel:8
+    build: .
     environment:
       - DB_HOST=db
       - DB_USERNAME=postgres

@@ -71,3 +71,4 @@ https://www.twilio.com/blog/get-started-docker-laravel
 https://github.com/yemiwebby/laravel-docker
 https://laravel.com/docs/8.x/sail
 https://laravel.com/docs/8.x/authentication
+https://laravel.com/docs/8.x/hashing
