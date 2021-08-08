@@ -28,8 +28,13 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-          $user = Auth::user(); 
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials)) {
+          $user = Auth::user();
           $user->generateToken();
           return response()->json([
               'data' => $user->toArray(),

@@ -7,6 +7,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
 class LoginTest extends TestCase
@@ -30,12 +31,15 @@ class LoginTest extends TestCase
 
     public function testUserLoginsSuccessfully()
     {
+        $email = 'test@gmail.com';
+        $password = 'Test_123456';
+        $hashedPassword = Hash::make($password);
         $user = User::factory()->make([
-            'email' => 'testlogin@user.com',
-            'password' => bcrypt('toptal123'),
+            'email' => $email,
+            'password' => $hashedPassword,
         ]);
 
-        $payload = ['email' => 'testlogin@user.com', 'password' => 'toptal123'];
+        $payload = ['email' => $email, 'password' => $password];
 
         $this->json('POST', 'api/login', $payload)
             ->assertStatus(200)
